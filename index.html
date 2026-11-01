@@ -1,1 +1,80 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#070b17">
+  <title>Fruit Master - ملك الفواكه</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
 
+<div id="game">
+  <canvas id="canvas"></canvas>
+
+  <div class="hud">
+    <div class="hud-card">
+      <span>⭐ النقاط</span>
+      <strong id="score">0</strong>
+    </div>
+
+    <div class="hud-card level-card">
+      <span>🏆 المستوى</span>
+      <strong id="level">1 / 20</strong>
+      <small id="levelStatus">بداية المغامرة</small>
+    </div>
+
+    <div class="hud-card">
+      <span>❤️ المحاولات</span>
+      <strong id="lives">3</strong>
+    </div>
+
+    <div class="hud-card">
+      <span>⏱️ الوقت</span>
+      <strong id="timer">0</strong>
+    </div>
+
+    <button id="soundBtn">🔊</button>
+  </div>
+
+  <div class="level-progress">
+    <div class="progress-info">
+      <span id="progressText">0 / 50 نقطة</span>
+      <span id="nextLevel">المستوى التالي: 2</span>
+    </div>
+
+    <div class="progress-track">
+      <div id="progressFill"></div>
+    </div>
+  </div>
+
+  <div id="menu" class="screen">
+    <div class="logo">🍉</div>
+    <h1>FRUIT MASTER</h1>
+    <h2>ملك الفواكه</h2>
+    <p>استعد لأقوى تحدي لتقطيع الفواكه!</p>
+    <div class="menu-fruits">🍓 🍊 🍍 🥝 🍇</div>
+    <button id="startBtn">ابدأ المغامرة ▶</button>
+    <small>20 مستوى من التحدي والإثارة</small>
+  </div>
+
+  <div id="levelMessage"></div>
+
+  <div id="gameover" class="screen hidden">
+    <div class="logo">🏆</div>
+    <h1>انتهت اللعبة!</h1>
+
+    <div class="results">
+      <p>⭐ مجموع النقاط: <strong id="finalScore">0</strong></p>
+      <p>🏆 وصلت للمستوى: <strong id="finalLevel">1</strong></p>
+      <p>⏱️ وقت اللعب: <strong id="finalTime">0</strong> ثانية</p>
+    </div>
+
+    <button id="restartBtn">العب مرة أخرى 🔄</button>
+    <button id="homeBtn">القائمة الرئيسية</button>
+  </div>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
